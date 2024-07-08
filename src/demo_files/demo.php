@@ -38,4 +38,4 @@
    $businessOffer = $data[$test_url][15];
    $businessBenefit = $data[$test_url][16];
 
-   
+   $demo_rock_test = '';
