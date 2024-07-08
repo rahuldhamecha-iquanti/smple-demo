@@ -37,4 +37,5 @@
    $businessRate = $data[$test_url][14];
    $businessOffer = $data[$test_url][15];
    $businessBenefit = $data[$test_url][16];
-   ?>
+
+   
