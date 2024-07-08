@@ -1,5 +1,8 @@
 name: PHPCS Test
 
+on:
+  workflow_dispatch:
+
 permissions:
   contents: read
 

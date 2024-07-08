@@ -41,3 +41,5 @@
    $demo_rock_test = '';
 
    $test_rock = '';
+
+   $sample_rock = 'demo test';
