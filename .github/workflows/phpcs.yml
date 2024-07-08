@@ -1,10 +1,17 @@
 name: PHPCS Test
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  merge_group:
 
 permissions:
+  actions: read
+  checks: read
   contents: read
+  statuses: read
 
 jobs:
   build:
