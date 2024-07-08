@@ -1,4 +1,19 @@
 {
+    "name": "rahul.dhamecha/demo",
+    "description": "Demo Wordpress Test",
+    "license": "GPL2",
+    "autoload": {
+        "psr-4": {
+            "RahulDhamecha\\Demo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rahul Dhamecha",
+            "email": "rahul.dhamecha@iquanti.com"
+        }
+    ],
+    "require": {},
     "require-dev": {
         "automattic/vipwpcs": "^3.0",
         "overtrue/phplint": "^9.4"
