@@ -1,7 +1,7 @@
 {
     "name": "rahul.dhamecha/demo",
     "description": "Demo Wordpress Test",
-    "license": "GPL2",
+    "license": "GPL-2.0-or-later",
     "autoload": {
         "psr-4": {
             "RahulDhamecha\\Demo\\": "src/"
