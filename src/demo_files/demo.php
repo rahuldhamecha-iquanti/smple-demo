@@ -39,3 +39,5 @@
    $businessBenefit = $data[$test_url][16];
 
    $demo_rock_test = '';
+
+   $test_rock = '';
