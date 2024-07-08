@@ -1,0 +1,1777 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'BentonSans-Light';
+    src: url('../fonts/bentonsans-light.ttf');
+    src: url('../fonts/BentonSans-Light.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BentonSans-Bold';
+    src: url('../fonts/BentonSans-Bold.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bentonsans Serif Regular";
+    src: url("../fonts/bentonsans_book.ttf");
+}
+
+@font-face {
+    font-family: "Bentonsans-Medium";
+    src: url("../fonts/bentonsans-medium.ttf");
+}
+
+@font-face {
+    font-family: "Bentonsans-Regular";
+    src: url("../fonts/bentonsans_regular.ttf");
+}
+
+@font-face {
+    font-family: "Bentonsans-Black";
+    src: url("../fonts/Benton_Sans_Black.ttf");
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Bentonsans Serif Regular";
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #333333;
+    /*  background: #F4F6F8;*/
+    background: #fff;
+}
+
+sup {
+    font-family: Arial,sans-serif;
+
+}
+
+header {
+    background: url(../images/sclp_banner.png) no-repeat #00AAFF;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 57px;
+    position: relative;
+}
+
+header:after {
+    content: "";
+    width: 100%;
+    bottom: 0;
+    height: 80px;
+    background: #fff;
+    z-index: 1;
+    background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(255 255 255) 100%);
+    position: absolute;
+}
+
+.navbar-expand-md .navbar-nav {
+    gap: 40px;
+}
+
+.sticky-top {
+    background: #0F4C97;
+}
+
+.nav-link {
+    color: #fff;
+    font-family: 'BentonSans-Bold';
+    font-size: 15px;
+    border-radius: 40px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0F4C97;
+    background: #fff;
+}
+
+.navbar-collapse {
+    justify-content: end;
+    gap: 15px;
+}
+
+.card_Wrap {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ApplyCardWrap,
+.Sclp_wrap {
+    background: #fff;
+    padding: 30px 45px;
+    border-radius: 35px;
+    box-shadow: 0 2px 84px rgba(13, 17, 26, 41%);
+}
+
+.bannerflex {
+    display: flex;
+    gap: 60px;
+}
+
+.banner_top {
+    max-width: 350px;
+}
+
+.Sclp_wrap {
+    box-shadow: 0 2px 33px rgba(13, 17, 26, 25%);
+    margin-bottom: 50px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 80px;
+
+}
+
+.sclp_item:last-child::before {
+    height: 100%;
+    width: 1px;
+    content: "";
+    background: #979797;
+    position: absolute;
+    left: -40px;
+}
+
+.sclp_item {
+    flex: 1;
+    position: relative;
+}
+
+.sclp_item:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sclp_item img{
+    box-shadow: 0 -1px 12px rgba(0, 0, 0, 62%);
+    border-radius: 12px;
+    max-width: 284px;
+}
+
+.DivPlace {
+    color: #fff;
+    font-size: 16px;
+    font-family: "Bentonsans-Medium";
+    margin: 30px 30px 50px;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.4);
+    /* text-shadow: 0 0 10px rgb(0 0 0); */
+    padding: 5px 15px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    z-index: 2;
+}
+.sclp_item .AnnualFee {
+    margin-top: 25px;
+}
+
+.sclp_item .card_name_compare {
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    max-width: 337px;
+    margin-bottom: 30px;
+}
+
+.head-banner {
+    font-size: 40px;
+    color: #00175A;
+    font-family: 'BentonSans-Bold';
+    margin-bottom: 20px;
+}
+
+.banner-subhead {
+    font-size: 25px;
+    color: #00175A;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.card_Wrap img {
+    width: 100%;
+}
+
+
+
+.card_Wrap li {
+    flex: 1;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card_Wrap li.activeCard,
+.card_Wrap li:hover {
+    flex: 1.3;
+    transition: .3s;
+}
+
+.card_name {
+    color: #003994;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: "Bentonsans-Black";
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 7px;
+}
+
+.card_name::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #33A0FF;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+.lto_time {
+    color: #00175A;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-family: 'BentonSans-Bold';
+}
+
+.banner_row {
+    display: flex;
+    text-align: left;
+    gap: 80px;
+    position: relative;
+}
+
+.head_name_filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.p_banner_normal {
+    font-size: 17px;
+    font-family: "Bentonsans-Medium";
+}
+
+.running_text_25 {
+    color: #00175A;
+    font-size: 25px;
+}
+
+.ReturnBtn {
+    font-size: 16px;
+    text-decoration: underline;
+    color: #000;
+    border: 0;
+    background: none;
+    position: absolute;
+    right: 0;
+}
+
+.banner-col {
+    flex: 1;
+}
+
+.h2-offer,
+.popuphead {
+    font-size: 39px;
+    color: #00175A;
+    font-family: 'BentonSans-Bold';
+}
+
+.popuphead {
+    max-width: 500px;
+    text-align: center;
+}
+
+.h2-offer span {
+    color: #33A0FF;
+}
+
+.banner_running_text {
+    color: #00175A;
+    font-size: 23px;
+    font-family: "Bentonsans-Medium";
+}
+
+.p_banner_note {
+    font-size: 17px;
+    color: #006FCF;
+    font-family: "Bentonsans-Medium";
+}
+
+.AnnualFee {
+    color: #006FCF;
+    font-size: 17px;
+    font-family: "Bentonsans-Medium";
+}
+
+.ApplyNow {
+    background: #D25B73;
+    font-size: 19px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Bentonsans-Medium";
+    border-radius: 12px;
+}
+
+.ApplyNow:hover {
+    color: #fff;
+    background: rgba(210, 91, 115, 0.9);
+    text-decoration: none;
+}
+
+.banner_top .ApplyNow {
+    margin: 30px auto 20px;
+    box-shadow: 0 2px 51px #050505;
+}
+
+.LearnMore {
+    color: #D25B73;
+    font-size: 19px;
+    font-family: 'BentonSans-Bold';
+    text-decoration: underline;
+}
+
+.banner_top img {
+    width: 100%;
+    box-shadow: 0 -1px 12px rgba(0, 0, 0, 62%);
+    border-radius: 12px;
+}
+
+.Terms {
+    color: #53565A;
+    font-size: 12px;
+    margin: 20px 0 5px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.tab_details .Terms {
+    justify-content: left;
+    margin: 11px 0 5px;
+}
+
+
+.Terms a {
+    color: #53565A;
+    text-decoration: underline;
+
+}
+
+.banner_top .Terms {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    max-width: 260px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin: 20px auto 5px;
+    text-shadow: 0 2px 39px rgba(255, 255, 255, 34%);
+}
+
+.banner_top .Terms a {
+    color: #fff;
+}
+
+.Reward_ponit_list {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+
+.Reward_ponit_list li {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 20px;
+}
+
+.Reward_ponit_list p {
+    color: #000000;
+    font-size: 23px;
+    margin-bottom: 0;
+}
+
+.Reward_ponit_list .earn_ponit {
+    background: #006FCF;
+    height: 47px;
+    flex: 0 0 47px;
+    width: 47px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: baseline;
+    border-radius: 100%;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: 'BentonSans-Bold';
+}
+
+.banner_row .Reward_ponit_list {
+    border-top: 1px solid rgba(151, 151, 151, 0.654);
+    margin-top: 20px;
+}
+
+.sectionHead {
+    font-size: 36px;
+    font-family: 'BentonSans-Bold';
+    margin-bottom: 35px;
+}
+
+.head_name_filter .sectionHead {
+    margin-bottom: 0;
+}
+
+#applyWith .sectionHead {
+    color: #00175A;
+}
+
+.Apply_steps {
+    display: flex;
+
+    gap: 40px;
+}
+
+.Apply_items {
+    background: #fff;
+    border-radius: 25px;
+    padding: 25px 25px;
+    box-shadow: 0 2px 39px rgba(0, 0, 0, 25%);
+    margin-bottom: 25px;
+    margin-top: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.step_head {
+    font-size: 21px;
+    font-family: "Bentonsans-Medium";
+    color: #006FCF;
+    margin-bottom: 20px;
+}
+
+#compareCards,
+#applyWith {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#applyWith .ApplyNow {
+    margin: 10px auto 15px;
+}
+
+.filter_item {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter_text {
+    width: 149px;
+    font-family: "Bentonsans-Medium";
+    font-size: 16px;
+}
+
+.filter_btn_wrap {
+    display: flex;
+    gap: 20px;
+}
+
+.filter_btn {
+    position: relative;
+}
+
+.filter_btn label {
+    width: 221px;
+    height: 32px;
+    font-family: "Bentonsans-Medium";
+    border: 1px solid #006FCF;
+    background: #006FCF;
+    border-radius: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.filter_btn input {
+    position: absolute;
+    opacity: 0;
+}
+
+.filter_btn label:hover,
+.filter_btn input:checked+label {
+    color: #006FCF;
+    border: 1px solid #006FCF;
+    background: transparent;
+}
+
+.filter_btn input:disabled+label {
+    background: #B9B9B9;
+    border: 1px solid #B9B9B9;
+
+}
+
+.compareWrap {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.compare_col {
+    background: #fff;
+    border-radius: 20px;
+    margin-top: 50px;
+    max-width: 33%;
+    position: relative;
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 39px rgba(0, 0, 0, 25%);
+}
+
+.Compare_center {
+    display: flex;
+    justify-content: center;
+}
+
+.card_img {
+    max-width: 165px;
+    margin-top: -50px;
+    box-shadow: 0 3px 20px rgba(0, 44, 93, 30%);
+    border-radius: 6px;
+}
+
+.card_name_compare {
+    font-size: 21px;
+    font-family: "Bentonsans-Medium";
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.compare_col .AnnualFee {
+    font-size: 12px;
+    color: #000000;
+    font-family: "Bentonsans Serif Regular";
+}
+
+.compare_col .ApplyNow {
+    width: 133px;
+    height: 37px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 12px auto 0;
+}
+
+.compare_col .h2-offer {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 25px;
+}
+
+.col_running_text {
+    font-size: 16px;
+    text-align: left;
+}
+
+.compare_col .Reward_ponit_list li {
+    flex-direction: column;
+    align-items: center;
+}
+
+.compare_col .Reward_ponit_list p {
+    font-size: 17px;
+}
+
+.padding_col {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form-check {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.benefits {
+    position: relative;
+    padding-top: 30px;
+}
+
+.Benefits_ul {
+    text-align: left;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    font-size: 23px;
+}
+
+.Benefits_ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.Benefits_ul li::before {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: #000000;
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 7px;
+}
+
+.benefits::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: calc(100% + 30px);
+    left: -15px;
+    top: 0;
+    background: #898989;
+    height: 1px;
+}
+
+.benefits_btn {
+    font-size: 16px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.benefits_btn::after {
+    position: absolute;
+    content: "";
+    bottom: 17px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000000;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg) skew(-5deg, -5deg);
+    right: 0;
+    margin: auto;
+}
+
+.benefit_details {
+    position: relative;
+    padding-top: 15px;
+}
+
+.benefit_head {
+    color: #006FCF;
+    font-size: 30px;
+    font-family: "Bentonsans-Medium";
+}
+
+.slider_running_text {
+    font-size: 21px;
+}
+
+.notes {
+    font-size: 12px;
+}
+
+.slider_tablet {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    border-top: 1px solid #003994;
+}
+
+.slider_left,
+.slider_right {
+    flex: 1;
+}
+
+.slider_left,
+.rewardpoint>span {
+    display: none;
+}
+
+.slider_left.selected,
+.rewardpoint>span.selected {
+    display: block;
+}
+
+.slider_right {
+    display: flex;
+    justify-content: center;
+}
+
+.rangeslider {
+    display: inline-block;
+    /* margin-right: -15px; */
+    /* width: 158px;*/
+    position: relative;
+    min-height: 305px;
+}
+
+.rangeslider input {
+    width: 305px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    bottom: -53px;
+    /* margin: 0; */
+    transform-origin: left center;
+    background: transparent;
+    /* transform: rotateX(180deg) rotateY(0deg) rotateZ(90deg); */
+    transform: rotate(-90deg);
+}
+
+.pointValues,
+.rewardpoint {
+    /*width: 54px;*/
+    /* height: 268px; */
+    padding-top: 0;
+    margin-left: 15px;
+    float: left;
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    font-family: "Bentonsans-Medium";
+}
+
+.rewardpoint {
+    right: 40px;
+    text-align: right;
+    left: auto;
+    font-size: 31px;
+    line-height: 31px;
+    color: #006FCF;
+    font-family: 'BentonSans-Bold';
+}
+
+.span_ponit {
+    font-size: 19px;
+    line-height: 20px;
+}
+
+.reward_span1,
+.reward_span2,
+.reward_span3,
+.reward_span4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.reward_span2 {
+    top: 80px;
+}
+
+.reward_span3 {
+    top: 170px;
+}
+
+.reward_span4 {
+    top: 258px;
+}
+
+.pointValues>span {
+    display: block;
+    white-space: nowrap;
+    position: relative;
+}
+.pointValues>span.selected {
+    color: #00175A;
+    font-family: 'BentonSans-Bold';
+}
+
+.pointValues>span::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    background: #fff;
+    border-radius: 100%;
+    border: 5px solid #C5C5C5;
+    left: -48px;
+    z-index: 1;
+    top: 0px;
+}
+
+.span1 {
+    margin-top: 7px
+}
+
+.span2,
+.span3,
+.span4,
+.span5 {
+    margin-top: 59px
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 28px 0;
+    /* transition: 4s all ease-out; */
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 305px;
+    height: 8px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 1.3px;
+    border: 0px solid #979797;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 2px 4px rgba(29, 29, 29, 0.5);
+    background: linear-gradient(180deg, #FFFFFF, #F2F2F2);
+    border: 8px solid #D25B73;
+    z-index: 9;
+    height: 40px;
+    position: relative;
+    width: 40px;
+    border-radius: 48px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -16px;
+    /* transition: 0.4s all ease-out; */
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+input[type=range]::-moz-range-track {
+    width: 305px;
+    height: 8px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 1.3px;
+    border: 0px solid #979797;
+    transition: 0.4s all ease-out;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 2px 4px rgba(29, 29, 29, 0.5);
+    background: linear-gradient(180deg, #FFFFFF, #F2F2F2);
+    border: 8px solid #D25B73;
+    z-index: 9;
+    height: 40px;
+    width: 40px;
+    border-radius: 48px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -11px;
+    position: relative;
+    transition: 0.4s all ease-out;
+}
+
+input[type=range]::-ms-track {
+    width: 305px;
+    height: 8px;
+    cursor: pointer;
+    color: transparent;
+    background: transparent;
+    border-radius: 1.3px;
+    border: 0px solid #979797;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: transparent;
+    border-radius: 1.3px;
+    border: 0px solid #979797;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: transparent;
+    border-radius: 1.3px;
+    border: 0px solid #979797;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 0px 2px 4px rgba(29, 29, 29, 0.5);
+    background: linear-gradient(180deg, #FFFFFF, #F2F2F2);
+    border: 8px solid #D25B73;
+    z-index: 9;
+    height: 40px;
+    width: 40px;
+    border-radius: 48px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -11px;
+    position: relative;
+    transition: 0.4s all ease-out;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: transparent;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: transparent;
+}
+
+.rangewrap {
+    position: relative;
+    height: 305px;
+    width: 8px;
+}
+
+.rangewrap::before {
+    height: 276px;
+    width: 8px;
+    background: #BFBFBF;
+    position: absolute;
+    left: -8px;
+    margin: auto;
+    right: 0;
+    bottom: 8px;
+    content: "";
+}
+
+#exploreRewards {
+    padding: 0px 0;
+
+}
+
+.tab_section {
+    background: url(../images/JustinNicholas.jpg) no-repeat;
+    padding: 120px 0;
+    background-size: cover;
+    position: relative;
+    background-position: top center;
+}
+
+.global_tab {
+    background: #fff;
+    width: 100%;
+    max-width: 712px;
+    border-radius: 33px;
+    box-shadow: 0 2px 39px rgba(0, 0, 0, 25%);
+}
+
+.global_tab .sectionHead {
+    margin: 0;
+    padding: 20px 30px;
+}
+
+.tab {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    margin: 0;
+}
+
+.tab li {
+    flex: 1;
+    background: rgba(51, 160, 255, 0.22);
+    border-bottom: 5px solid #00175A;
+    height: 39px;
+    display: flex;
+    font-family: "Bentonsans-Medium";
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tab .activetab,
+.tab li:hover {
+    color: #fff;
+    background: #00175A;
+}
+
+.tab_details {
+    padding: 20px 30px;
+    display: none;
+}
+
+.nav_banner_slider {
+    display: none;
+}
+
+.activeDel {
+    display: block;
+}
+
+.h3_tab {
+    color: #00175A;
+    font-size: 26px;
+    font-family: 'BentonSans-Bold';
+}
+
+.h4_blue_tab {
+    font-size: 18px;
+    font-family: 'BentonSans-Bold';
+    color: #003994;
+    margin: 20px 0;
+}
+
+.h4_tab {
+    font-size: 17px;
+    font-family: "Bentonsans-Medium";
+}
+
+.row_tab {
+    display: flex;
+    gap: 20px;
+}
+
+.tab_col_wrap {
+    width: calc(50% - 10px);
+}
+
+.tab_col {
+
+    border-bottom: 1px solid rgba(151, 151, 151, 0.373);
+    padding-top: 16px;
+}
+
+.tab_col:last-child {
+    border: 0;
+}
+
+.mobilebanner {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    height: 100%;
+    display: none;
+    width: 100%;
+    overflow: scroll;
+    z-index: 9999;
+    top: 0;
+    background: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.popup_head {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.closebtn {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    border: none;
+    background: url(../images/close_button.svg) no-repeat;
+    background-position: center center;
+}
+
+footer {
+    width: 100%;
+    min-height: 300px;
+    padding: 40px 0 20px;
+    background: #104c97;
+    position: relative;
+    color: #fff;
+    font-size: 9px;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+footer p {
+    line-height: 2;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.partner-logos {
+    margin: 30px 0 25px;
+}
+
+footer .small {
+    font-size: 11px;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+footer ul li+li {
+    margin-left: 16px;
+}
+
+footer a,footer a:hover {
+    color: #fff;
+}
+
+.partner-logos img {
+    width: 100%;
+}
+
+.partner_img_tab,
+.partner_img_mob {
+    display: none;
+}
+
+
+.tooltip {
+    font-size: 12px;
+    z-index: 10000;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.tooltip-inner {
+    background: #006FCF;
+    opacity: 1;
+    padding: 20px;
+    font-size: 14px;
+    max-width: 295px;
+    text-align: left;
+    width: 100%;
+    z-index: 9
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: #006FCF !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: #006FCF !important;
+}
+.ft_labl{
+    text-align: right;
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    font-family: "Bentonsans-Medium";
+    text-shadow: 0 0 10px rgba(0, 0, 0, 25%);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px 15px;
+}
+ .tab_details .note{
+    font-size: 11px;
+  }
+  #applyForCard,#compareCards,#exploreRewards,#applyWith{
+    scroll-margin-top: 50px;
+}
+.tab_details .benefitTerms{
+    padding-right: 10px;
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 1190px;
+    }
+    #applyWith  .container {
+        max-width: 1058px;
+    }
+}
+  @media (min-width: 769px) {
+    .Terms{
+        margin: 30px 0 5px;
+        font-size: 15px;
+    }
+    .banner_top .Terms{
+        margin: 30px auto 5px;
+    }
+  .ApplyNow.d-md-block {
+    display: flex!important;
+}
+.banner_top  .DivPlace{
+    display: none;
+}
+header{
+    padding-bottom: 110px;
+}
+.banner_top .AnnualFee{
+    display: none;
+}
+.banner_top{
+    padding-right: 33px;
+}
+  }
+@media (max-width: 1192px) {
+    .partner_img_tab {
+        display: block;
+    }
+
+    .partner_img {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner_top .Terms{
+        max-width: none;
+    }
+    .h3_tab{
+        font-size: 19px;
+    }
+    .Benefits_ul{
+        font-size: 13px;
+    }
+    .banner_top .AnnualFee{
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .slider_running_text{
+font-size: 16px;
+    }
+    .banner_top .ApplyNow {
+        margin: 20px auto 20px;
+    }
+   .Terms,  .Terms a{
+        font-size: 12px;
+    }
+    .LearnMore{
+        font-size: 16px;
+    }
+    #applyWith .container{
+text-align: left !important;
+    }
+    .slider_left .slider_left{
+        margin-bottom: 15px;
+    }
+    .Reward_ponit_list .earn_ponit {
+        background: #006FCF;
+        height: 40px;
+        flex: 0 0 40px;
+        width: 40px;
+        font-size: 18px;
+    }
+    .sclp_item .Reward_ponit_list .earn_ponit {
+        height: 30px;
+        flex: 0 0 30px;
+        width: 30px;
+        font-size: 12px;
+    }
+    .sclp_item .Reward_ponit_list li{
+gap: 10px;
+    }
+    .removeMobcontainer  +  .DivPlace{
+        display: none;
+    }
+    .banner_top .DivPlace {
+        position: relative;
+        margin: 30px 0 0 auto;
+        width: fit-content;
+        font-size: 12px;
+    }
+    .slider_tablet {
+        border-top: 0px solid #003994;
+        padding-top: 0;
+    }
+    .Terms{
+        margin-top: 20px;
+    }
+    #applyForCard, #compareCards, #exploreRewards {
+        scroll-margin-top: 180px;
+    }
+    .banner-col {
+        width: 100%;
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .partner_img_tab,
+    .clearfilter {
+        display: none;
+    }
+
+    header {
+        background: none;
+        padding-top: 0px;
+    }
+
+    .banner_top {
+        padding-top: 50px;
+        background: url(../images/ConradPuntaMita_Spherical.jpg) no-repeat #00AAFF;
+        background-position: center center;
+        background-size: cover;
+        padding-bottom: 40px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .head-banner {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .row_tab {
+        gap: 0;
+    }
+
+    .tab_col:last-child {
+        border-bottom: 1px solid rgba(151, 151, 151, 0.373);
+    }
+
+    .tab_col_wrap:last-child .tab_col:last-child {
+        border-bottom: 0px solid rgba(151, 151, 151, 0.373);
+    }
+
+    .sectionHead {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .lto_time,
+    .p_banner_note,
+    .Reward_ponit_list p {
+        font-size: 16px;
+    }
+
+    .earn_ponit {
+        font-size: 18px;
+    }
+
+    .h2-offer {
+        font-size: 27px;
+    }
+
+    .banner_running_text {
+        font-size: 19px;
+    }
+
+    .card_Wrap {
+        gap: 0;
+        padding: 0;
+    }
+
+    .card_Wrap li.activeCard,
+    .card_Wrap li:hover {
+        flex: 1;
+    }
+
+    .mobilebanner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .card_Wrap li {
+        width: 100%;
+    }
+
+    .banner-subhead {
+        font-size: 14px;
+        margin-bottom: 20px;
+        max-width: 254px;
+    }
+
+    .card_Wrap img{
+        width: 150px;
+        display: block;
+        margin: auto;
+    }
+
+    .banner_row {
+        gap: 0;
+    }
+
+    .mobilebanner .AnnualFee {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .banner_top .Terms,
+    .banner_top .Terms a {
+        color: #fff;
+    }
+
+    .ApplyNow {
+        width: 140px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #compareCards .benefits_btn,
+    #compareCards .benefit_details
+    {
+        display: none;
+    }
+
+    .ApplyCardWrap {
+        padding: 20px;
+        box-shadow: 0 2px 39px rgba(0, 0, 0, 25%);
+    }
+
+    .banner_row,
+    .head_name_filter,
+    .filter_item,
+    .tab,
+    .row_tab,
+    .slider_tablet,
+    .filter_btn_wrap,
+    .compareWrap {
+        flex-wrap: wrap;
+    }
+
+    .banner_row::before,
+    header:after {
+        display: none;
+    }
+
+    .banner_top:after {
+        content: "";
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        background: #fff;
+        z-index: 1;
+        background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(255 255 255) 100%);
+        position: absolute;
+    }
+    .filter_text,
+    .filter_btn_wrap {
+        width: 100%;
+    }
+
+    .filter_btn {
+        width: calc(50% - 10px);
+    }
+
+    .filter_btn label,
+    .compare_col,
+    .tab_col_wrap {
+        width: 100%;
+    }
+
+    .compare_col {
+        max-width: 100%;
+        border-radius: 14px;
+    }
+
+    .slider_left,
+    .slider_right {
+        flex: auto;
+        width: 100%;
+    }
+
+    .tab {
+        justify-content: space-between;
+        gap: 6px;
+    }
+
+    .tab li {
+        flex: none;
+        width: calc(50% - 3px);
+    }
+
+    .nav_banner_slider {
+        display: block;
+        position: relative;
+    }
+
+    .dot_wrap {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 20px;
+        background: #00175A;
+    }
+
+    .nav_banner_slider .prev,
+    .nav_banner_slider .next {
+        position: absolute;
+        top: -190px;
+        color: #fff;
+        display: table;
+        left: 0;
+        margin: auto;
+        right: auto;
+        font-size: 30px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .nav_banner_slider .next {
+        right: 0;
+        left: auto;
+    }
+
+    .active.dot {
+        background: #FFFFFF;
+    }
+
+    .compare_col .Reward_ponit_list li {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .padding_col {
+        padding: 0;
+    }
+
+    .card_name {
+        font-size: 14px;
+        width: 50%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .ApplyCardWrap {
+        text-align: left;
+        border-radius: 14px;
+    }
+
+    .Reward_ponit_list {
+        order: 0;
+    }
+
+    .benefit_head,.sclp_item .Reward_ponit_list p{
+        font-size: 13px;
+    }
+    .benefit_head{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .Terms {
+        order: 3;
+    }
+
+    .partner_img_mob {
+        display: block;
+    }
+
+    .tab_section {
+        padding: 231px 0 50px;
+        background-size: 100%;
+        background-image: url(../images/conrad_maldives.jpg);
+        background-position: top center;
+    }
+
+    /* .global_tab {
+        border-radius: 14px;
+    } */
+
+
+    .popuphead {
+        font-size: 28px;
+    }
+
+    .bannerflex {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .banner_top img {
+        width: 149px;
+        margin: auto;
+        border-radius: 6px;
+    }
+
+    .running_text_25 {
+        font-size: 16px;
+    }
+
+    .Apply_steps {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .Apply_items {
+        margin: 0;
+        border-radius: 13px;
+    }
+
+    .banner_top {
+        text-align: center;
+        width: 100%;
+        max-width: none;
+        position: relative;
+    }
+
+    .Sclp_wrap {
+        gap: 0;
+        flex-direction: column;
+        margin-top: 50px;
+        border-radius: 20px;
+        padding: 30px 25px;
+    }
+
+    .sclp_item:last-child::before {
+        display: none;
+    }
+
+    .sclp_item img {
+        max-width: 165px;
+        margin-top: -80px;
+        box-shadow: 0 3px 20px rgba(0, 44, 93, 30%);
+        border-radius: 6px;
+    }
+
+    .benefit_details {
+        border-top: 1px solid #E9E9E9;
+    }
+
+    .sclp_item .card_name_compare {
+        text-align: center;
+        margin-top: 25px;
+        font-size: 21px;
+        max-width: 244px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sclp_item .AnnualFee {
+        order: 1;
+        margin-top: 0px;
+        color: #000;
+        font-size: 14px;
+    }
+
+    .sclp_item .ApplyNow {
+        order: 2;
+    }
+
+    .banner-col .ApplyNow{
+        margin: auto ;
+        font-size: 19px;
+        width: 180px;
+        height: 50px;
+    }
+    .banner-col .Terms{
+     text-align: center;
+    }
+
+.navbar-expand-md .navbar-nav {
+    gap: 5px;
+    padding-top: 19px;
+}
+.nav-link:hover, .nav-link.active {
+    color: #fff;
+    background:transparent;
+}
+.navbar-expand-md .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+}
+.navbar-toggler{
+    background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg width='29px' height='21px' viewBox='0 0 29 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='M01_DCLP_Gold' transform='translate(-253.000000, -13.000000)' fill='%23FFFFFF'%3e%3cg id='Group-6' transform='translate(253.937500, 13.187500)'%3e%3crect id='Rectangle' x='0' y='10' width='27.5625' height='2.625' rx='1.3125'%3e%3c/rect%3e%3crect id='Rectangle' x='0' y='0' width='27.5625' height='2.625' rx='1.3125'%3e%3c/rect%3e%3crect id='Rectangle' x='0' y='18.1875' width='27.5625' height='2.625' rx='1.3125'%3e%3c/rect%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.navbar-toggler:focus {
+    box-shadow:none;
+}
+.banner_top::after {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.29) 100%);
+}
+.banner_top .container {
+    z-index: 1;
+    position: relative;
+}
+.banner_top .DivPlace {
+    position: relative;
+    margin: 30px 0 0 auto;
+    width: fit-content;
+    font-size: 12px;
+}
+.ft_labl {
+    right: 10px;
+    top: 170px;
+    font-size: 12px;
+    bottom: auto;
+}
+}
+@media screen and (max-width: 768px) and (min-width: 768px) {
+    #applyWith .d-md-block{
+        display: none !important;
+    }
+    
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+    .nav-link:hover, .nav-link.active {
+        color: #0F4C97;
+        background: #fff;
+    }
+    .navbar-expand-md .navbar-nav {
+        gap: 5px;
+        padding-top: 0;
+    }
+}
+@media (max-width: 540px) {
+
+    .tab_section{
+        background-image: url(../images/conrad_maldives_mob.png);
+        padding-top: 420px;
+    }
+    .ft_labl{
+        top: 370px;
+    }
+}

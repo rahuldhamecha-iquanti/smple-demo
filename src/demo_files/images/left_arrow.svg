@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="72px" viewBox="0 0 57 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group Copy</title>
+    <defs>
+        <filter x="-226.9%" y="-105.4%" width="553.8%" height="310.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="M01_Business" transform="translate(-45.000000, -210.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group" transform="translate(67.000000, 232.000000)">
+                <g id="Group-Copy" filter="url(#filter-1)" transform="translate(6.500000, 14.000000) scale(-1, 1) translate(-6.500000, -14.000000) ">
+                    <path d="M12.996867,13.8930576 C12.9743383,13.5461459 12.8468837,13.2175528 12.6348595,12.9597588 L2.46373097,0.515733679 C2.12623423,0.102336984 1.61407211,-0.0813783952 1.1201969,0.0338005944 C0.626321687,0.148979584 0.225776738,0.545551724 0.0694636224,1.07411216 C-0.0868494935,1.60267261 0.0248206907,2.18290764 0.362403476,2.59621913 L9.68593775,14.000014 L0.362403476,25.4037809 C0.0248206907,25.8170924 -0.0868494934,26.3973274 0.0694636225,26.9258878 C0.225776738,27.4544483 0.626321687,27.8510204 1.1201969,27.9661994 C1.61407211,28.0813784 2.12623423,27.897663 2.46373097,27.4842663 L12.6348595,15.0402412 C12.8916993,14.7276471 13.0223363,14.313665 12.996867,13.8930576 L12.996867,13.8930576 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

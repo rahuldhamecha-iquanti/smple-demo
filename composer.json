@@ -1,0 +1,15 @@
+{
+    "require-dev": {
+        "automattic/vipwpcs": "^3.0",
+        "overtrue/phplint": "^9.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "lint" : "phplint --no-cache src/",
+        "phpcs" : "phpcs --standard=WordPress-VIP-Go -sp --basepath=. --ignore=vendor src/"
+    }
+}
