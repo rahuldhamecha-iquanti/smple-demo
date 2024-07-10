@@ -48,4 +48,5 @@
 
    $rock_demo = 'fdsdfsdfsd';
 
-   $aws_key = 'Sample Test';
+   $aws_keys = 'fdkjfdjkfjsdfjksdkjnf';
+   $aws_secrete = "sdfkldklfdfklfdsklmf";

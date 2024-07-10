@@ -58,12 +58,6 @@ jobs:
       with:
         name: phpcs_results
         path: phpcs_results
-    
-    - uses: actions/download-artifact@v4
-      with:
-        name: phpcs_results
-    - name: Display structure of downloaded files
-      run: ls -R phpcs_results
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
