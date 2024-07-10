@@ -58,10 +58,12 @@ jobs:
       with:
         name: phpcs_results
         path: phpcs_results
+
+    - name: Run PHPCS on changed files and save results
       uses: actions/download-artifact@v4
         with:
           name: phpcs_results
-      name: Display structure of downloaded files
+    - name: Display structure of downloaded files
       run: ls -R
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
