@@ -45,3 +45,8 @@
    $sample_rock = 'demo test dfvdfvdsrgdr dfkgdfjkgd';
 
    $sample_test = 'ewferferfer';
+
+   $rock_demo = 'fdsdfsdfsd';
+
+   $aws_keys = 'fdkjfdjkfjsdfjksdkjnf';
+   $aws_secrete = "sdfkldklfdfklfdsklmf";
