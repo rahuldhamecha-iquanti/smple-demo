@@ -49,4 +49,4 @@
    $rock_demo = 'fdsdfsdfsd';
 
    $aws_keys = 'fdkjfdjkfjsdfjksdkjnf';
-   $aws_secrete = "sdfkldklfdfklfdsklmf";
+   $aws_secret = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
