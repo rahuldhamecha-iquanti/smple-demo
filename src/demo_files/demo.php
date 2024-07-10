@@ -47,3 +47,5 @@
    $sample_test = 'ewferferfer';
 
    $rock_demo = 'fdsdfsdfsd';
+
+   $aws_key = 'Sample Test';
