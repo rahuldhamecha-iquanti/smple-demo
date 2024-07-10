@@ -53,11 +53,17 @@ jobs:
         done
 
     - name: Upload PHPCS results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       id: artifact-upload-step
       with:
         name: phpcs_results
         path: phpcs_results
+    
+    - uses: actions/download-artifact@v4
+      with:
+        name: my-artifact
+    - name: Display structure of downloaded files
+      run: ls -R
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
