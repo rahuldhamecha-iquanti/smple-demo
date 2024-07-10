@@ -53,7 +53,6 @@ jobs:
         done
 
     - name: Upload PHPCS results
-      if: failur()
       uses: actions/upload-artifact@v3
       id: artifact-upload-step
       with:
