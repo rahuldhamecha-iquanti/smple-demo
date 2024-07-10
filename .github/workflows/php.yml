@@ -1,0 +1,67 @@
+name: PHPCS Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  merge_group:
+    branches: [ "main"]
+
+permissions:
+  actions: read
+  checks: read
+  contents: read
+  statuses: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v3
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+
+    - name: Get list of changed files
+      id: files
+      uses: jitterbit/get-changed-files@v1
+      with:
+        format: 'json'
+
+    - name: Run PHPCS on changed files and save results
+      run: |
+        changed_files=$(echo '${{ steps.files.outputs.all }}' | jq -r '.[]')
+        mkdir -p phpcs_results
+        for file in $changed_files; do
+          if [[ $file == *.php ]]; then
+            composer phpcs $file > "phpcs_results/${file//\//_}.txt"
+          fi
+        done
+
+    - name: Upload PHPCS results
+      if: failur()
+      uses: actions/upload-artifact@v3
+      id: artifact-upload-step
+      with:
+        name: phpcs-results
+        path: phpcs_results
+
+    - name: Output artifact ID
+      run:  echo 'Artifact ID is ${{ steps.artifact-upload-step.outputs.artifact-id }}'
+
+    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
+    # Docs: https://getcomposer.org/doc/articles/scripts.md
