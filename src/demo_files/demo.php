@@ -50,5 +50,5 @@
 
    $aws_keys = 'fdkjfdjkfjsdfjksdkjnf';
    $aws_secret = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
-   $database_password = "sanmple@1233";
-   $database_user = "fdsdsfsd";
+   $db_p = "sanmple@1233";
+   $db_u = "fdsdsfsd";
