@@ -45,3 +45,5 @@
    $sample_rock = 'demo test dfvdfvdsrgdr dfkgdfjkgd';
 
    $sample_test = 'ewferferfer';
+
+   $rock_demo = 'fdsdfsdfsd';
