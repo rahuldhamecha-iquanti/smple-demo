@@ -49,4 +49,6 @@
    $rock_demo = 'fdsdfsdfsd';
 
    $aws_keys = 'fdkjfdjkfjsdfjksdkjnf';
-   $aws_secrete = "sdfkldklfdfklfdsklmf";
+   $aws_secret = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
+   $db_p = "sanmple@1233";
+   $db_u = "fdsdsfsd";
